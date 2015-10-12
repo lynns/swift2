@@ -79,7 +79,7 @@ let myFloat: Float = 3.0
 let aDouble = 3.0
 let aInt = 3
 
-let total = aDouble + Double(aInt)
+let total = aDouble + aInt
 
 
 

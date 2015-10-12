@@ -58,4 +58,10 @@ for i in myArray {
   print("i = \(i)")
 }
 
+
+
+if myArray.count > 2 {
+  print("more than 2 items")
+}
+
 //: [Next](@next)

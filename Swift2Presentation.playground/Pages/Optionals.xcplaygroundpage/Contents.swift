@@ -18,7 +18,7 @@ let number = Int(numberString) //might fail to parse
 
 //Can't use number directly
 
-//let total = number + 3
+let total = number + 3
 
 
 

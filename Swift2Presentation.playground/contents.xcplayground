@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<playground version='6.0' target-platform='ios' requires-full-environment='true' display-mode='raw'>
+    <pages>
+        <page name='Basics'/>
+        <page name='Enums'/>
+        <page name='Switch'/>
+        <page name='Optionals'/>
+        <page name='if-let'/>
+        <page name='Protocols'/>
+        <page name='OperatorOverloads'/>
+        <page name='Guard'/>
+        <page name='ProtocolExtensions'/>
+        <page name='ErrorHandling'/>
+        <page name='AvailabilityChecking'/>
+    </pages>
+</playground>

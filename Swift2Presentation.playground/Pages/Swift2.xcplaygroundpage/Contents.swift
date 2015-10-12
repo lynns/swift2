@@ -1,9 +1,13 @@
 //: [Previous](@previous)
 
-//: Enums
-
 import Foundation
 
-var str = "Hello, playground"
+
+/*:
+SWIFT 2
+
+-----
+
+*/
 
 //: [Next](@next)

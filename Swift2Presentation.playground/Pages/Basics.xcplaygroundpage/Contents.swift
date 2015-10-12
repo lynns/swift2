@@ -110,4 +110,39 @@ let myNamedTuple = (num: 4, str: "another String")
 print("The number = \(myNamedTuple.num)")
 print("The string = \(myNamedTuple.str)")
 
+
+
+
+
+
+
+
+
+//: Arrays
+
+let myArray = [1, 2, 3]
+
+var mutableArray: Array<Int> = []
+
+mutableArray.append(1)
+mutableArray.append(2)
+mutableArray.append(3)
+
+
+
+
+
+
+
+
+
+//: Dictionaries
+
+let myDictionary = ["key": "value"]
+
+var mutableDictionary = [String: String]()
+mutableDictionary["key"] = "value"
+
+print(mutableDictionary)
+
 //: [Next](@next)

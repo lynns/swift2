@@ -1,9 +1,19 @@
 //: [Previous](@previous)
 
-//: Availability Checking
 
-import Foundation
+import UIKit
 
-var str = "Hello, playground"
+/*: 
+Availability Checking
+------
+*/
+
+if #available(iOS 9, *) {
+  print("Do things that only will work in iOS 9+")
+  
+} else {
+  print("Do fallback stuff")
+}
+
 
 //: [Next](@next)

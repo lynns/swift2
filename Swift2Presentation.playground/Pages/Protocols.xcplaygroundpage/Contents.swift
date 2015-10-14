@@ -12,38 +12,36 @@ struct Shape {
   let color: UIColor?
 }
 
-
-
-
-
-
-
 //: Define a protocol
 protocol Drawable {
   func draw() -> String
 }
 
 
-
-
-
-
-
-//Extend our Struct to implement protocol
 extension Shape: Drawable {
   func draw() -> String {
-    return "Draw the shape"
+    return "lksdjf"
   }
 }
 
 
 
 
+//Extend our Struct to implement protocol
 
 
-//: Create instance of Struct
-let s = Shape(color: nil)
 
-s.draw()
+
+
+
+//: Create instance of Struct and use draw
+
+
+
+
+
+
+
+
 
 //: [Next](@next)

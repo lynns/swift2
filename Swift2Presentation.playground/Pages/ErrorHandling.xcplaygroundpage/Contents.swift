@@ -54,20 +54,20 @@ func getName(data:Dictionary<String, AnyObject>) throws -> String {
 let goodData = ["person": ["name": "Bob"]]
 let badData = ["person": ["gender": "M"]]
 
-print("\n\nParse Good Data")
+// Good Data
 do {
-  print(try getName(goodData))
-  
+  let name = try getName(goodData)
 } catch {
-  print("Error parsing data: \(error)")
+  let msg = "Error parsing data: \(error)"
 }
 
-print("\n\nParse Bad Data")
+
+
+// Bad Data
 do {
-  print(try getName(badData))
-  
+  let name = try getName(badData)
 } catch {
-  print("Error parsing data: \(error)")
+  let msg = "Error parsing data: \(error)"
 }
 
 //: [Next](@next)

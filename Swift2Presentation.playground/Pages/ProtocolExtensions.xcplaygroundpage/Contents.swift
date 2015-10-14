@@ -16,14 +16,6 @@ struct Line {
   let length: Int
   let color: UIColor?
 }
-
-
-
-
-
-
-
-
 //: Define the protocol
 protocol Drawable {
   func draw() -> String
@@ -36,6 +28,7 @@ extension Drawable {
     return "Draw the shape"
   }
 }
+
 
 
 

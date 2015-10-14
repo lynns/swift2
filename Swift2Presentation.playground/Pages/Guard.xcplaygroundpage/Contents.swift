@@ -3,6 +3,7 @@
 import Foundation
 
 //: Swift 1.2 Parsing Data
+//old way
 
 func getName(data:Dictionary<String, AnyObject>) -> String? {
   if let person = data["person"] as? Dictionary<String, String>,
@@ -18,20 +19,26 @@ func getName(data:Dictionary<String, AnyObject>) -> String? {
 
 
 
+let goodData = ["person": ["name": "Bob"]]
+let badData = ["person": ["gender": "M"]]
 
+// parse name
+
+getName(goodData)
+getName(badData)
 
 
 
 
 //: Swift 2 Parsing with guard
-func newGetName(data:Dictionary<String, AnyObject>) -> String? {
+func betterGetName(data:Dictionary<String, AnyObject>) -> String? {
   guard let person = data["person"] as? Dictionary<String, String> else {
-    print("ERROR: Person object doesn't exist")
+    print("ERROR: 'Person' property doesn't exist")
     return nil
   }
   
   guard let name = person["name"] else {
-    print("ERROR: Name property doesn't exist")
+    print("ERROR: 'Name' property doesn't exist")
     return nil
   }
   
@@ -47,17 +54,8 @@ func newGetName(data:Dictionary<String, AnyObject>) -> String? {
 
 
 //: Parse the Data
-
-let goodData = ["person": ["name": "Bob"]]
-let badData = ["person": ["gender": "M"]]
-
-print("\n\nParse using old method")
-print(getName(goodData))
-print(getName(badData))
-
-
 print("\n\n\nParse using new method")
-print(newGetName(goodData))
-print(newGetName(badData))
+print(betterGetName(goodData))
+print(betterGetName(badData))
 
 //: [Next](@next)

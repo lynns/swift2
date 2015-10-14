@@ -28,11 +28,10 @@ struct Square {
 }
 
 
+// Create instances
 
+let s = Square(length: 1.0, color: UIColor.redColor())
 
-let c = Circle(radius: 3.0, color: UIColor.redColor())
-
-let s = Square(length: 3.0, color: UIColor.blueColor())
 
 
 //: [Next](@next)

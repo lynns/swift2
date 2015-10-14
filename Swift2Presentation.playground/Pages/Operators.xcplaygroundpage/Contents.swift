@@ -1,6 +1,6 @@
 //: [Previous](@previous)
 
-import Foundation
+import UIKit
 
 /*:
 
@@ -22,9 +22,9 @@ Standard Operators
 
 //: Nil Coalescing Operator ??
 
-let myNum = Int("asd") ?? 1000
-
 // Javscript: var myNum = parseInt("asd") || 1000
+
+let myNum = Int("asd") ?? 1000
 
 
 
@@ -35,11 +35,13 @@ let myNum = Int("asd") ?? 1000
 
 
 //: Optional Chaining
+let vc: UIViewController? = UIViewController()
 
-let myDictionary: Dictionary<String, AnyObject?>? = [:]
-
-if let myValue = myDictionary?["aKey"] as? String {
-  print("Found a string value for key")
+if let navigationBar = vc?.navigationController?.navigationBar {
+  print("Found bar")
+  
+} else {
+  print("No Bar found")
 }
 
 

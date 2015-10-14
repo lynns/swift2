@@ -37,7 +37,7 @@ class Circle: Shape {
 class Square: Shape {
   let length: Double
   
-  init(length: Double, color: UIColor?) {
+  init(length: Double = 10.2, color: UIColor?) {
     self.length = length
     super.init(color: color)
   }
@@ -49,9 +49,9 @@ class Square: Shape {
 
 
 
-let c = Circle(radius: 3.0, color: UIColor.redColor())
+//create instances
 
-let s = Square(length: 4.0, color: UIColor.blueColor())
+
 
 
 
@@ -70,6 +70,18 @@ extension Square {
   }
 }
 
-let perimeter = s.perimeter()
+
+//use perimeter
+
+let s = Square(color: UIColor.redColor())
+
+s.perimeter()
+
+
+
+
+
+
+
 
 //: [Next](@next)

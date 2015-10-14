@@ -7,9 +7,9 @@ Basics
 
 //: Constants
 
-let myConstant = 3
+var myConstant = 3
 
-//myConstant = 4
+myConstant = 4
 
 
 
@@ -55,16 +55,17 @@ let myBool = true
 
 //: Explicit Types
 
-let explicitInt: Int = 3
+let explicitInt: Int = 3_000_000
 
 let explicit8BitInt: Int8 = 3 // Int, Int8, Int16, Int32, Int64
 
 
-print(Int64.max)
-print(Int.max)
+let i64 = Int64.max
+let i = Int.max
 
 
 let myFloat: Float = 3.0
+
 
 
 
@@ -79,6 +80,13 @@ let myFloat: Float = 3.0
 let aDouble = 3.0
 let aInt = 3
 
+//Can't add different types (overloading?)
+
+public func +(lhs: Double, rhs: Int) -> Double {
+  return lhs + Double(rhs)
+}
+
+
 let total = aDouble + aInt
 
 
@@ -90,27 +98,28 @@ let total = aDouble + aInt
 
 
 //: Tuples
-
 let myTuple = (3, "a String")
 
-print("The number = \(myTuple.0)")
-print("The string = \(myTuple.1)")
+//Access by index
+
+let num = myTuple.0
 
 
 
-let (theNum, theString) = myTuple
-
-print("The number = \(theNum)")
-print("The string = \(theString)")
 
 
 
+
+
+
+//: Named members
 let myNamedTuple = (num: 4, str: "another String")
 
-print("The number = \(myNamedTuple.num)")
-print("The string = \(myNamedTuple.str)")
+//Access by name
 
 
+
+let num = myNamedTuple.num
 
 
 
@@ -120,15 +129,12 @@ print("The string = \(myNamedTuple.str)")
 
 //: Arrays
 
-let myArray = [1, 2, 3]
-
-var mutableArray: Array<Int> = []
-
-mutableArray.append(1)
-mutableArray.append(2)
-mutableArray.append(3)
+var myArray = [1, 2, 3]
 
 
+//mutable arrays
+
+myArray.append(2)
 
 
 
@@ -138,11 +144,14 @@ mutableArray.append(3)
 
 //: Dictionaries
 
-let myDictionary = ["key": "value"]
+var myDictionary: Dictionary<String, AnyObject> = ["key": "value", "more": 123]
 
-var mutableDictionary = [String: String]()
-mutableDictionary["key"] = "value"
+//mutable dictionaries
 
-print(mutableDictionary)
+let val  = myDictionary["newVar"]
 
+let anotherDict = [String:String]()
+
+
+//j
 //: [Next](@next)

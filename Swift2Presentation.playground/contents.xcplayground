@@ -8,6 +8,7 @@
         <page name='Structs'/>
         <page name='Classes'/>
         <page name='Protocols'/>
+        <page name='Closures'/>
         <page name='Swift2'/>
         <page name='Guard'/>
         <page name='ProtocolExtensions'/>

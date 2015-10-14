@@ -9,8 +9,21 @@ Can contain a value, or nil.  Applies to all types (objects and primitives)
 
 All about safety.
 */
+//Objects can't be set to nil
 
-let numberString = "100"
+let myString: String? = nil
+
+
+
+
+
+
+
+
+
+
+//: Usage
+let numberString = "asdf"
 
 let number = Int(numberString) //might fail to parse
 
@@ -18,29 +31,19 @@ let number = Int(numberString) //might fail to parse
 
 //Can't use number directly
 
-let total = number + 3
+
+//force unwrap
 
 
 
 
+//if-let unwrap
 
-
-
-
-
-
-//: Options for Unwrapping Optionals
-
-let forceUnwrapped = number!
-let total = forceUnwrapped + 3
-
-
-
-if let safeUnwrapped = number {
-  let total = safeUnwrapped + 3
+if let otherNum = number {
+  let total2 = realNum + 3
+} else {
+  print("hello")
 }
-
-
 
 
 

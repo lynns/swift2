@@ -1,6 +1,7 @@
 //: [Previous](@previous)
 
 import Foundation
+let PI = 3.1459
 
 /*:
 Enums
@@ -20,9 +21,12 @@ let square: Shape = .Square
 
 
 
-print("Triangle Value = \(Shape.Triangle.rawValue)")
+let str = "Triangle Value = \(Shape.Triangle.rawValue)"
 
 
+//Create instance from raw
+
+let tri = Shape(rawValue: 12)
 
 
 
@@ -49,35 +53,13 @@ let betterRectangle = BetterShape.Rectangle(short: 4, long: 10)
 
 
 
-//: Enums with Smarts
-
-enum FancyShape {
-  case Circle, Square, Triangle
-  
-  func area() -> Double {
-    //compute area here
-    return 100
-  }
-}
-
-let c = FancyShape.Circle
-
-print("Area of c = \(c.area())")
-
-
-
-
-
-
-
-
-
 /*:
 Switch Statements
 -----
 */
+let shape = Shape.Circle
 
-switch circle {
+switch shape {
   case .Circle:
     print("Found a circle")
     
@@ -93,7 +75,10 @@ switch circle {
 
 
 
-let response = (code: 401, error: NSError(domain: "org.familysearch.error", code: 0, userInfo: nil))
+
+
+let response = (code: 401,
+                error: NSError(domain: "org.familysearch.error", code: 0, userInfo: nil))
 
 
 switch response {
@@ -103,6 +88,36 @@ switch response {
   
   default: print("Handle all other errors: \(response.error)")
 }
+
+
+
+
+
+
+
+
+
+//: Enums with Smarts
+
+enum FancyShape {
+  case Circle(radius: Double)
+  case Rectangle(short: Int, long: Int)
+  
+  func area() -> Double {
+    switch self {
+      case .Circle (let radius): return PI * radius * radius
+      case .Rectangle (let short, let long): return Double(short * long)
+    }
+  }
+}
+
+let c = FancyShape.Circle(radius: 3.0)
+
+let areaOfC = c.area()
+
+let r = FancyShape.Rectangle(short: 2, long: 8)
+
+let areaOfR = r.area()
 
 
 //: [Next](@next)
